@@ -1,0 +1,16 @@
+{
+  "name": "footer",
+  "version": "1.0.0",
+  "main": "Footer.js",
+  "scripts": {
+    "start": "node-sass sass/Footer.scss css/footer.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

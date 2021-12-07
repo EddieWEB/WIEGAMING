@@ -1,0 +1,56 @@
+
+.links{
+
+    text-align: center!important;
+    font-size: 16px!important;
+    margin: 15px!important;
+    display: flex!important;
+    justify-content: center!important;
+}
+
+.container-row{
+    display: flex!important;
+    justify-content: space-evenly!important;
+        
+    @include responsive(tab-land) {
+            display: flex!important;
+            justify-content: space-around!important;
+        } 
+    
+    @include responsive(tab-port) {
+            display: flex!important;
+            flex-direction: column!important;
+            
+            } 
+    
+    @include responsive(phone) {
+        display: flex!important;
+        flex-direction: column!important;
+
+    } 
+
+}
+
+
+.div-content1{
+    width: 300px!important;
+
+}
+
+.div-content2{
+    width: 300px!important;
+
+}
+
+.div-content3{
+    width: 300px!important;
+
+}
+
+h5{
+    margin-bottom: 5%!important;
+}
+
+.text-position {
+    text-align: start!important;
+}
