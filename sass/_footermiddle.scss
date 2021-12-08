@@ -39,11 +39,32 @@
 
 .div-content2{
     width: 300px!important;
+    @include responsive(tab-port) {
+        display: none!important;
+   
+        
+        } 
+
+@include responsive(phone) {
+    display: none!important;
+
+} 
 
 }
 
 .div-content3{
     width: 300px!important;
+
+    @include responsive(tab-port) {
+        display: none!important;
+   
+        
+        } 
+
+@include responsive(phone) {
+    display: none!important;
+
+} 
 
 }
 
