@@ -6,5 +6,17 @@
     text-align: center!important;
     background-color: #1A1E26!important;
     color: white!important;
-    font-size: 23px!important;
+    font-size: 20px!important;
+
+    @include responsive(tab-port) {
+      font-size: 15px!important;
+
+
+        } 
+
+@include responsive(phone) {
+
+font-size: 15px!important;
+        
+        } 
 }
