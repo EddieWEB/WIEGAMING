@@ -1,13 +1,25 @@
+
+
 .container-social-media {
 
-   display: flex!important;
-    justify-content:space-around!important;
-   padding: 25px!important;
-   border-bottom: white 1px solid!important;
-  
+    display: flex!important;
+     justify-content:space-around!important;
+    padding: 25px!important;
+    border-bottom: white 1px solid!important;
+    
+    @include responsive(tab-port) {
+        margin-left: -100px;
 
-}
 
+        } 
+
+@include responsive(phone) {
+
+margin-left: -100px;
+        
+        } 
+ 
+ }
 
 .div-left {
 
