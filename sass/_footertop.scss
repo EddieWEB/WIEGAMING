@@ -4,18 +4,18 @@
 
     display: flex!important;
      justify-content:space-around!important;
-    padding: 25px!important;
+    padding: 1.563rem!important;
     border-bottom: white 1px solid!important;
     
     @include responsive(tab-port) {
-        margin-left: -100px;
+        margin-left: -6.25rem;
 
 
         } 
 
 @include responsive(phone) {
 
-margin-left: -100px;
+margin-left: -6.25rem;
         
         } 
  

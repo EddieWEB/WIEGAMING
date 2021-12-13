@@ -3,7 +3,7 @@
 
     text-align: center!important;
     font-size: 1rem!important;
-    margin: 16px!important;
+    margin: 1rem!important;
     display: flex!important;
     justify-content: center!important;
 }
@@ -33,12 +33,12 @@
 
 
 .div-content1{
-    width: 300px!important;
+    width: 18.75rem!important;
 
 }
 
 .div-content2{
-    width: 300px!important;
+    width: 18.75rem!important;
     @include responsive(tab-port) {
         display: none!important;
    
@@ -53,7 +53,7 @@
 }
 
 .div-content3{
-    width: 300px!important;
+    width: 18.75rem!important;
 
     @include responsive(tab-port) {
         display: none!important;
@@ -82,5 +82,5 @@ h5{
 }
 
 fa, .fas {
-    margin: 5px!important;
+    margin: 0.313rem!important;
 }
