@@ -1,0 +1,66 @@
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 6.25rem; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.294); /* Black w/ opacity */
+}
+
+ /* Modal Content */
+ .modal-content {
+  background-color: whitesmoke;
+  margin: auto;
+  font-family: Oswald;
+  padding: 6.25rem;
+  border: 0.063rem solid #888;
+  border-radius: 2%;
+  width: 62.5rem;
+  height: 31.25rem;
+ 
+
+  @include responsive(tab-land) {
+      width:50rem;
+      height: 31.25rem;
+
+  } 
+
+@include responsive(tab-port) {
+
+  width:37.5rem;
+  height: 31.25rem;
+
+      } 
+
+@include responsive(phone) {
+
+  width:18.75rem;
+  height: 31.25rem;
+      
+      } 
+ }
+
+ .close {
+  color: #6E7371;
+  float: right;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: -5.625rem;
+  margin-top: -6.25rem;
+}
+
+.close:hover,
+.close:focus {
+  color: #6E7371;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p{
+  margin-top: 6rem;
+}

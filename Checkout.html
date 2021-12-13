@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/Checkout.css">
+	<script src="./Checkout.js" defer></script>
+	<title>Document</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<br>
+		<form>
+
+			<!--Kundvagn-->
+			<div class="shoppingitems">
+
+
+				<h4>
+					<span>Din kundvagn</span>
+					<span class="produkt-1">0</span>
+				</h4>
+
+				<div class="listItems">
+
+					<ul>
+						<li class="list">
+							<div>
+								<h6>Produkt 1</h6>
+								<small>Beskriving</small>
+							</div>
+							<span class="muted">12kr</span>
+						</li>
+
+						<li class="list">
+							<div>
+								<h6>Produkt 2</h6>
+								<small>Beskriving</small>
+							</div>
+							<span class="muted">8kr</span>
+						</li>
+
+							<li class="list">
+								<div>
+									<h6>Produkt 3</h6>
+									<small>Beskriving</small>
+								</div>
+								<span class="muted">5kr</span>
+							</li>
+
+					<div>
+							<li class="list-2">
+								<div>
+									<h6 class="green">Rabattkod</h6>
+									<small>EXEMPELKOD</small>
+								</div>
+								<span class="span-green">-5kr</span>
+							</li>
+					
+
+						<li class="total-list">
+						
+							<span>Totalt pris (inkl moms)</span>
+							<strong>20kr</strong>
+						</li>
+					</ul>
+				</div>
+			</div>
+				
+				<div class="group-input">
+					<input type="text" class="discount-input" id="discountInput"
+						placeholder="Skriv din Rabattkod här . . .">
+					<div class="input-group-append">
+						<button type="submit" class="btn2">Använd</button>
+					
+				</div>
+			</div>
+		</form>
+		<br>
+
+		<!--kunduppgifter-->
+		<div class="bigContainer">
+			<h4>
+				<span>
+					Dina uppgifter
+				</span>
+			</h4>
+
+			<form>
+				<div class="formPosition">
+					<div class="formgroup">
+						<input type="email" class="form-input" id="mailInput" placeholder="Mejladress">
+
+
+						<div class="sidetoside">
+							<div class="formgroup-sidetoside">
+								<input type="text" class="form-input" id="namnInput" placeholder="Förnamn. . .">
+							</div>
+
+							<div class="formgroup-sidetoside">
+								<input type="text" class="form-input" id="lastnameInput" placeholder="Efternamn . . .">
+							</div>
+						</div>
+					</div>
+
+					<div class="formgroup">
+						<input type="text" class="form-input" id="adressInput" placeholder="Adress. . .">
+					</div>
+
+					<div class="sidetoside">
+						<div class="formgroup-sidetoside">
+							<input type="text" class="form-input" id="postcodeInput" placeholder="Postnummer. . .">
+						</div>
+
+						<div class="formgroup-sidetoside">
+							<input type="text" class="form-input" id="postortInput" placeholder="Postort . . .">
+						</div>
+					</div>
+
+				</div>
+				<hr>
+				<div class="checkbox custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="same-address">
+					<label class="custom-control-label" for="same-address">Skicka till fakturaadressen</label>
+				</div>
+
+				<hr>
+
+				<!--Betalning-->
+				<h4>Betalningsmetod</h4>
+
+				<div class="div-margin">
+					<div class="checkbox custom-radio">
+						<input id="credit" name="paymentMethod" type="radio" class="custom-control-input">
+						<label class="custom-control-label" for="credit">Kreditkort</label>
+					</div>
+
+					<div class="checkbox custom-radio">
+						<input id="swish" name="paymentMethod" type="radio" class="custom-control-input">
+						<label class="custom-control-label" for="swish">Swish</label>
+					</div>
+
+					<div class="checkbox custom-radio">
+						<input id="klarna" name="paymentMethod" type="radio" class="custom-control-input">
+						<label class="custom-control-label" for="klarna">Klarna</label>
+					</div>
+				</div>
+
+				<div class="divpayment">
+					<div class="col-md-6 div-bottom">
+						<label for="cc-name">Namn på kort</label>
+						<input type="text" class="form-input" id="cc-name" placeholder="ex. Anna Andersson">
+						<small class="text-muted">Fullständigt namn som visas på kortet</small>
+						<div class="invalid-feedback">
+							Name on card is required
+						</div>
+					</div>
+					<div class="col-md-6 div-bottom">
+						<label for="cc-number">Kortnummer</label>
+						<input type="number" class="form-input" id="cc-number" placeholder="1234 5678 9012 3456">
+						<div class="invalid-feedback">
+							Credit card number is required
+						</div>
+					</div>
+				</div>
+				<div class="divpayment">
+					<div class="col-md-3 div-bottom">
+						<label for="cc-expiration">Utgångsdatum</label>
+						<input type="text" class="form-input" id="cc-expiration" placeholder="MM/AA">
+						<div class="invalid-feedback">
+							Expiration date required
+						</div>
+					</div>
+					<div class="col-md-3 div-bottom">
+						<label for="cc-cvv">CVC/CVV</label>
+						<input type="number" class="form-input" id="cc-cvv" placeholder="3 siffror">
+						<div class="invalid-feedback">
+							Security code required
+						</div>
+					</div>
+				</div>
+				<hr>
+				<button class="btn btn-primary btn-lg btn-block" id="btnPay" type="submit">Slutför köp</button>
+			</form>
+			<!--Modal-->
+			<div id="myModal" class="modal">
+
+				<!-- Modal innehåll -->
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<p>innehål..</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+
+</body>
+
+</html>

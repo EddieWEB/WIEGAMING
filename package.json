@@ -1,0 +1,15 @@
+{
+  "name": "checkout",
+  "version": "1.0.0",
+  "main": "Checkout.js",
+  "scripts": {
+    "start": "node-sass sass/Checkout.scss css/Checkout.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "node-sass": "^7.0.0"
+  }
+}

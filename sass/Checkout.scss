@@ -1,0 +1,64 @@
+@import './breakpoints.scss';
+@import './kundvagn.scss';
+@import './kunduppgifter.scss';
+@import './betalning.scss';
+@import './modal.scss';
+
+body{
+    font-family: oswald;
+}
+
+
+.form-input {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 0.125rem);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: whitesmoke;
+    background-clip: padding-box;
+    border: 0.063rem solid #ced4da;
+    border-radius: 0.25rem;
+    margin-bottom: 1%;
+}
+
+
+input:focus { 
+    outline: none !important;
+    border-color: #0071BC;
+    box-shadow: 0 0 0.625rem #0071BC;
+ }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
