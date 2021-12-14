@@ -1,0 +1,95 @@
+
+
+.container-social-media {
+
+    display: flex!important;
+     justify-content:space-around!important;
+    padding: 1.563rem!important;
+    border-bottom: white 1px solid!important;
+    
+    @include responsive(tab-port) {
+        margin-left: -6.25rem;
+
+
+        } 
+
+@include responsive(phone) {
+
+margin-left: -6.25rem;
+        
+        } 
+ 
+ }
+
+.div-left {
+
+    display: flex!important;
+    justify-content: space-around!important;
+    
+@include responsive(tab-land) {
+
+        display: flex!important;
+        justify-content: space-around!important;
+
+    } 
+
+@include responsive(tab-port) {
+
+        display: none!important;
+
+        } 
+
+@include responsive(phone) {
+
+display: none!important;
+        
+        } 
+    }
+
+
+.div-right {
+
+    display: flex!important;
+    justify-content:space-between!important;
+
+.font-fb{
+
+    color: white!important;
+    margin-right: 15%!important;
+}
+
+.font-twitter {
+
+    color:white!important;
+    margin-right: 15%!important;
+
+}
+
+.font-phone {
+
+    color: white!important;
+    margin-right: 15%!important;
+
+}
+
+.font-instagram {
+
+    color: white!important;
+    margin-right: 15%!important;
+
+}
+
+.font-mail {
+
+    color: white!important;
+    margin-right: 15%!important;
+
+}
+
+.font-github{
+
+    color: white!important;
+    margin-right: 15%!important;
+
+}
+}

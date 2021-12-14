@@ -1,0 +1,86 @@
+
+.links{
+
+    text-align: center!important;
+    font-size: 1rem!important;
+    margin: 1rem!important;
+    display: flex!important;
+    justify-content: center!important;
+}
+
+.container-row{
+    display: flex!important;
+    justify-content: space-evenly!important;
+        
+    @include responsive(tab-land) {
+            display: flex!important;
+            justify-content: space-around!important;
+        } 
+    
+    @include responsive(tab-port) {
+            display: flex!important;
+            flex-direction: column!important;
+            
+            } 
+    
+    @include responsive(phone) {
+        display: flex!important;
+        flex-direction: column!important;
+
+    } 
+
+}
+
+
+.div-content1{
+    width: 18.75rem!important;
+
+}
+
+.div-content2{
+    width: 18.75rem!important;
+    @include responsive(tab-port) {
+        display: none!important;
+   
+        
+        } 
+
+@include responsive(phone) {
+    display: none!important;
+
+} 
+
+}
+
+.div-content3{
+    width: 18.75rem!important;
+
+    @include responsive(tab-port) {
+        display: none!important;
+   
+        
+        } 
+
+@include responsive(phone) {
+    display: none!important;
+
+} 
+
+}
+
+h5{
+    margin-bottom: 5%!important;
+}
+
+.text-position {
+    text-align: center!important;
+}
+
+.text {
+    color: white!important;
+    font-weight:bold!important;
+}
+
+fa, .fas {
+    margin: 0.313rem!important;
+}

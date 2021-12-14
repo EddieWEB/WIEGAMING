@@ -1,0 +1,115 @@
+@import "variable.scss";
+
+* {
+    padding: $padding;
+    margin: $margin;
+    box-sizing: $boxSizing;
+    font-family: $fontSize;
+    color: $color;
+}
+
+.fa-shopping-cart {
+    background-color: coral;
+    padding: 10px 20px;
+    color: whitesmoke;
+}
+
+.fa-shopping-cart:hover {
+    background-color: #333;
+}
+
+// nedan är alltså hela ytan när man trycker på knappen, inte själva varukorgen.
+.varukorg-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 0; // påverkar inget just nu så länge det inte är 0, då läggs den över knappen
+    width: 100%;
+    height: 100%;
+    overflow: auto; // gör så att sidan förlängs om det finns massa innehåll.
+    background-color: rgba(151, 143, 143, 0.5); // opacity 0.5
+}
+
+.varukorg-modal-content {
+    background-color: whitesmoke;
+    margin: 5% auto;
+    width: 95%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17); // ser ni något?
+    animation-name:modalopen;
+    animation-duration: 1s;
+}
+
+@keyframes modalopen {
+    from{opacity: 0}
+    to{opacity:1}
+}
+
+.modal-header {
+    padding: 2rem;
+    background-color: $c1-blue;
+}
+
+.modal-header > h2 {
+    color:whitesmoke;
+}
+
+.close-btn{
+    float: right;
+    margin-right: 2rem;
+    margin-top:-1rem;
+    font-size:3rem; 
+    color: whitesmoke;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: black;
+    text-decoration: none; //ingen underline
+    cursor: pointer;
+}
+
+.modal-produkter{
+    padding:2rem;
+    line-height:3rem;
+}
+
+.modal-summa {
+    background-color: $c3-light-grey;
+    text-align: center;
+    width: 60%;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.modal-summa > h3 {
+    color:whitesmoke;
+}
+
+.to-checkout {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-checkout {
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    align-self: center;
+    cursor: pointer;
+    background-color: $c5-yellow;
+    color: whitesmoke;
+}
+
+.btn-checkout:active{
+    background-color: $c4-red;
+}
+
+
+.wishlist-suggestions {
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+//längst ned
+@import "mediaqueries.scss";
+

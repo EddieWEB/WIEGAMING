@@ -1,15 +1,16 @@
 {
-  "name": "checkout",
-  "version": "1.0.0",
-  "main": "Checkout.js",
-  "scripts": {
-    "start": "node-sass sass/Checkout.scss css/Checkout.css -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "name": "wie-gaming",
+  "version": "0.0.1",
   "description": "",
-  "dependencies": {
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass -o css -w sass",
+    "build-css": "node-sass -o css sass"
+  },
+  "keywords": [],
+  "author": "Grupp 4",
+  "license": "ISC",
+  "devDependencies": {
     "node-sass": "^7.0.0"
   }
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart Modal</title>
+    <script src="shoppingCartModal.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/4cc1dae1f8.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="stylesheet" href="css/shoppingCartModal.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <button class="fas fa-shopping-cart">Click Here</button>
+    <div class="varukorg-modal">
+      <div class="varukorg-modal-content">
+        <div class="modal-header">
+          <span class="close-btn">&times;</span>
+          <h2>Varukorg</h2>
+        </div>
+        <section class="modal-produkter">
+          <p>test 10 kr</p>
+          <p>JOLT COLA á pris 2500kr, 24st = 291289812 kr</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+            tenetur vel expedita voluptatibus. Nemo eum voluptates ut quas modi
+            dolores.
+          </p>
+        </section>
+        <div class="modal-summa">
+          <h3>Totalsumma: 10,000 kr</h3>
+        </div>
+        <div class="to-checkout">
+          <button class="btn-checkout">Till kassan</button>
+        </div>
+        <div class="wishlist-suggestions">
+          <i>Psst! Du har väl inte glömt att lägga till dessa produkter från din
+            wishlist..</i>
+          <i class="far fa-grin-wink"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
