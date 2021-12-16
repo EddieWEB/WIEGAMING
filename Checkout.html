@@ -89,7 +89,8 @@
 
 		<div class="div-margin">
 			<div class="checkbox custom-radio">
-				<input id="postnord" name="delivery" type="radio" class="custom-control-input" onclick="myCheckBox()">
+				<input id="postnord" name="delivery" type="radio" class="custom-control-input"
+					value="Postnord, Leverans inom 1 - 2 arbetsdagar" onclick="myCheckBox()">
 				<label class="custom-control-label" for="postnord">Postnord</label>
 				<div id="textpostnord" class="text">
 					<small>
@@ -103,8 +104,8 @@
 			</div>
 
 			<div class="checkbox custom-radio">
-				<input id="homedelivery" name="delivery" type="radio" class="custom-control-input"
-					onclick="myCheckBox()">
+				<input id="homedelivery" name="delivery" type="radio" class="custom-control-input" 
+				value="Hemleverans, Leverans inom 1 - 5 arbetsdagar" onclick="myCheckBox()">
 				<label class="custom-control-label" for="homedelivery">Hemleverans</label>
 				<div id="texthomedelivery" class="text">
 					<small>
@@ -120,7 +121,8 @@
 			</div>
 
 			<div class="checkbox custom-radio">
-				<input id="instabox" name="delivery" type="radio" class="custom-control-input" onclick="myCheckBox()">
+				<input id="instabox" name="delivery" type="radio" class="custom-control-input" 
+				value="Instabox, Snabbleverans 1-2 dagar även helger" onclick="myCheckBox()">
 				<label class="custom-control-label" for="instabox">Utlämningställe</label>
 				<div id="textinstabox" class="text">
 					<small>
@@ -179,12 +181,17 @@
 						</div>
 					</div>
 
+					<div class="formgroup">
+						<input type="tel" class="form-input" id="phoneInput" placeholder="+46. . .">
+					</div>
+
 				</div>
 				<hr>
 				<div class="checkbox custom-checkbox">
 					<input type="checkbox" class="custom-control-input" id="same-address">
 					<label class="custom-control-label" for="same-address">Skicka till fakturaadressen</label>
 				</div>
+
 
 				<hr>
 
@@ -193,7 +200,7 @@
 
 				<div class="div-margin">
 					<div class="checkbox custom-radio" onclick="myCheckBox()">
-						<input id="credit" name="paymentMethod" type="radio" class="custom-control-input">
+						<input id="credit" value="Visakort" name="paymentMethod" type="radio" class="custom-control-input">
 						<label class="custom-control-label" for="credit">Visakort</label>
 					</div>
 
@@ -245,9 +252,38 @@
 			<div id="myModal" class="modal">
 
 				<!-- Modal innehåll -->
-				<div class="modal-content">
+				<div class="modal-content" id="modal">
 					<span class="close">&times;</span>
+					
+					<div class="modalstyle">
+
+					
+							<h2 class="h2order">Din beställning är genomförd!!</h2>
+							<img src="http://clipart-library.com/img/1179457.gif" class="fireworks">
+	
+	<div class="infotext">
+						<p class="leverans">KundInfo:</p>
+					<small>
+							<div id="kundinfo" class="kundinfoo"></div>
+						</small>
+					
+
+					<p class="leverans">Leveransalternativ:</p>
+					<small>
+					<div id="leveransinfo" class="kundinfoo"></div>
+				</small>
+					
+					<p class="leverans">Betalningsalternativ</p>
+					<small>
+					<div id="betalinfo" class="kundinfoo"></div>
+				</small>
+			</div>
+		
+		
+		</div>
 				
+		
+			
 				</div>
 			</div>
 		</div>

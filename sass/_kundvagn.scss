@@ -7,7 +7,7 @@
 .discount-input{
     display: block;
     width: 100%;
-    height: calc(2.25rem + 2px);
+    height: calc(2.25rem + 0.125rem);
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -17,12 +17,13 @@
     background-clip: padding-box;
     border: 0.063rem solid #ced4da;
     border-radius: 0.25rem;
-        margin-top: -2%;
+        margin-top: -1%;
+        margin-left: -3%;
         position: relative;
 
     @include responsive(tab-land) {
-        margin-top: -2%;
-  
+        margin-top: -1%;
+        margin-left: -3%;
     } 
   
   @include responsive(tab-port) {
@@ -40,8 +41,8 @@
 
 .btn2 {
 
-background-color: #0071BC; ;
-border-color: #0071BC; ;
+background-color: $c1-blue; ;
+border-color: $c1-blue; ;
 display: inline-block;
     font-weight: 400;
     color: whitesmoke;
@@ -51,18 +52,18 @@ display: inline-block;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0.25rem;
-    margin-top: -26%;
+    margin-top: -14%;
     position: inherit;
   
 
     @include responsive(tab-land) {
-        margin-top: -21%;
+        margin-top: -14%;
   
     } 
   
   @include responsive(tab-port) {
 
-    margin-top: -18%;
+    margin-top: -15%;
 
         } 
   

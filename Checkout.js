@@ -6,7 +6,8 @@ const shopperInfo = {
     lastName: document.getElementById('lastnameInput'),
     adress: document.getElementById('adressInput'),
     postCode: document.getElementById('postcodeInput'),
-    postOrt: document.getElementById('postortInput')
+    postOrt: document.getElementById('postortInput'),
+    phoneNumber: document.getElementById('phoneInput')
 }
 
 const payWithCart = {
@@ -16,8 +17,53 @@ const payWithCart = {
     cardCvv: document.getElementById('cc-cvv')
 }
 
+
+
 function payFunction(e){
 e.preventDefault();
+
+let mail = document.getElementById('mailInput').value
+let firstName = document.getElementById('namnInput').value
+let lastName = document.getElementById('lastnameInput').value
+let adress = document.getElementById('adressInput').value
+let postCode = document.getElementById('postcodeInput').value
+let postOrt = document.getElementById('postortInput').value
+let phoneNumber = document.getElementById('phoneInput').value
+
+const div = document.querySelector("#kundinfo");
+
+
+div.innerHTML += `<li>Email: ${mail} <br> Telefonnummer: ${phoneNumber} <br> 
+${firstName} ${lastName} <br> ${adress} <br> ${postCode} ${postOrt}</li>`
+div.style.listStyleType ="none";
+
+
+
+const a = document.getElementById("postnord")
+const b = document.getElementById("homedelivery")
+const c = document.getElementById("instabox")
+
+
+if (a.checked == true){
+  let a = document.getElementById("postnord").value
+  document.querySelector("#leveransinfo").innerHTML = a;
+} else if (b.checked == true){
+  let b = document.getElementById("homedelivery").value
+  document.querySelector("#leveransinfo").innerHTML = b;
+
+} else if (c.checked == true) {
+  let c = document.getElementById("instabox").value
+  document.querySelector("#leveransinfo").innerHTML = c;
+
+} 
+
+const d = document.getElementById("credit")
+
+if (d.checked == true) {
+let d = document.getElementById("credit").value
+document.querySelector("#betalinfo").innerHTML = d;
+}
+
 
 
 // om input inte fylls i funkar inte knappen (Betalning)
@@ -35,14 +81,11 @@ e.preventDefault();
     if(!shopperInfo.postCode.value) return;
     if(!shopperInfo.postOrt.value) return;
 
-
     // hämta modal
     const modal = document.getElementById("myModal");
-    console.log(modal)
 
     // hämta kryss knapp
     const span = document.getElementsByClassName("close")[0];
-    console.log(span)
     
     // När användare trycker på myBtn, öppna Modal
     modal.style.display = "block";
@@ -71,6 +114,7 @@ e.preventDefault();
 
         shopperInfo[key].value = "";     
          });
+
 }
 
 
@@ -88,7 +132,6 @@ function discountButton(){
 
          });
 
-
 }
 
 
@@ -96,7 +139,7 @@ function discountButton(){
 // checkbox leverans och betalning
 function myCheckBox() {
 
-    var checkBoxDelivery = document.getElementById("postnord");
+    const checkBoxDelivery = document.getElementById("postnord");
     var text = document.getElementById("textpostnord");
 
     if (checkBoxDelivery.checked == true){
@@ -106,7 +149,7 @@ function myCheckBox() {
     }
 
 
-    var checkBoxHomeDelivery = document.getElementById("homedelivery");
+    const checkBoxHomeDelivery = document.getElementById("homedelivery");
     var text = document.getElementById("texthomedelivery");
 
     if (checkBoxHomeDelivery.checked == true){
@@ -116,7 +159,7 @@ function myCheckBox() {
       }
 
 
-      var checkBoxInstaBox = document.getElementById("instabox");
+      const checkBoxInstaBox = document.getElementById("instabox");
       var text = document.getElementById("textinstabox");
   
       if (checkBoxInstaBox.checked == true){
@@ -125,7 +168,7 @@ function myCheckBox() {
            text.style.display = "none";
         }
 
-        var checkBoxVisaCard = document.getElementById("credit");
+        const checkBoxVisaCard = document.getElementById("credit");
         var text = document.getElementById("textvisacard");
     
         if (checkBoxVisaCard.checked == true){
