@@ -1,9 +1,44 @@
+container-kundvagn {
+
+    .listItems {
+        margin-left: -2.375rem;
+    }
+
+    h6 {
+        margin-bottom: 0!important;
+        margin-top: 0!important;
+        font-size: 1rem;
+      
+    }
+
+    small{
+        color: #6c757d!important
+    }
+
+
+
+.muted {
+    color: #6c757d!important;
+   }
+
+}
+
+
+.green{
+    color: #28a745!important;
+}
+
+.span-green{
+    color: #28a745!important;
+}
+
 .shoppingItems {
     margin-right: -0.938rem;
     margin-left: --0.938rem;
 }
 
 
+.group-input{
 .discount-input{
     display: block;
     width: 100%;
@@ -18,24 +53,8 @@
     border: 0.063rem solid #ced4da;
     border-radius: 0.25rem;
         margin-top: -1%;
-        margin-left: -3%;
+        margin-left: 0%;
         position: relative;
-
-    @include responsive(tab-land) {
-        margin-top: -1%;
-        margin-left: -3%;
-    } 
-  
-  @include responsive(tab-port) {
-
-    margin-top: -2%;
-
-        } 
-  
-  @include responsive(phone) {
-    margin-top: -3%;
-        
-        } 
 }
 
 
@@ -63,32 +82,30 @@ display: inline-block;
   
   @include responsive(tab-port) {
 
-    margin-top: -15%;
+    margin-top: -8%;
+}
 
         } 
   
   @include responsive(phone) {
 
-    margin-top: -15%;
+    margin-top: -7%;
         
         } 
 }
 
-
-.listItems {
-
-    margin-left: -2.375rem;
 }
+
 
 
 .produkt-1{
 
     color: #fff;
-    background-color: #6c757d;
+    background-color: $c3-light-grey;
     border-radius: 10rem;
     display: inline-block;
     padding: 0.25em 0.4em;
-    font-size: 75%;
+    font-size: 4.688rem;
     font-weight: 700;
     line-height: 1;
     text-align: center;
@@ -109,23 +126,6 @@ display: inline-block;
 }
 
 
-h6 {
-    margin-bottom: 0!important;
-    margin-top: 0!important;
-    font-size: 1rem;
-}
-
-
-small{
-    color: #6c757d!important
-}
-
-
-.muted {
- color: #6c757d!important;
-}
-
-
 .list-2{
 
     justify-content: space-between!important;
@@ -137,16 +137,6 @@ small{
     background-color: #f8f9fa!important;
     border: 0.063rem solid rgba(0,0,0,.125);
 
-}
-
-
-.green {
-   color: #28a745!important;
-}
-
-
-.span-green{
-    color: #28a745!important;
 }
 
 

@@ -17,7 +17,17 @@ const payWithCart = {
     cardCvv: document.getElementById('cc-cvv')
 }
 
+const listProduct = document.querySelector("#product-list")
+const nameProduct = document.querySelector("#product-name")
+const priceProduct = document.querySelector("#product-price")
+const QtyProduct = document.querySelector("#product-qty")
+const totalCart = document.querySelector("#cart-total")
+const getFromCart = JSON.parse(localStorage.getItem("cart")) || [{name: "Laptop", price: 4, qty: 1}, {name: "Laptop", price: 4, qty: 1}]
 
+
+function setCartLocalStorage() {
+    localStorage.setItem('cart', JSON.stringify(getFromCart));
+}
 
 function payFunction(e){
 e.preventDefault();
@@ -32,17 +42,14 @@ let phoneNumber = document.getElementById('phoneInput').value
 
 const div = document.querySelector("#kundinfo");
 
-
 div.innerHTML += `<li>Email: ${mail} <br> Telefonnummer: ${phoneNumber} <br> 
 ${firstName} ${lastName} <br> ${adress} <br> ${postCode} ${postOrt}</li>`
 div.style.listStyleType ="none";
 
 
-
 const a = document.getElementById("postnord")
 const b = document.getElementById("homedelivery")
 const c = document.getElementById("instabox")
-
 
 if (a.checked == true){
   let a = document.getElementById("postnord").value
@@ -50,12 +57,11 @@ if (a.checked == true){
 } else if (b.checked == true){
   let b = document.getElementById("homedelivery").value
   document.querySelector("#leveransinfo").innerHTML = b;
-
 } else if (c.checked == true) {
   let c = document.getElementById("instabox").value
   document.querySelector("#leveransinfo").innerHTML = c;
-
 } 
+
 
 const d = document.getElementById("credit")
 
@@ -66,8 +72,15 @@ document.querySelector("#betalinfo").innerHTML = d;
 
 
 
+
+      
+
+
+
+
+
 // om input inte fylls i funkar inte knappen (Betalning)
-    if(!payWithCart.cardName.value) return;
+ /*   if(!payWithCart.cardName.value) return;
     if(!payWithCart.cardNumber.value) return;
     if(!payWithCart.cardexpire.value) return;
     if(!payWithCart.cardCvv.value) return;
@@ -79,7 +92,7 @@ document.querySelector("#betalinfo").innerHTML = d;
     if(!shopperInfo.lastName.value) return;
     if(!shopperInfo.adress.value) return;
     if(!shopperInfo.postCode.value) return;
-    if(!shopperInfo.postOrt.value) return;
+    if(!shopperInfo.postOrt.value) return;*/
 
     // hämta modal
     const modal = document.getElementById("myModal");
@@ -114,7 +127,6 @@ document.querySelector("#betalinfo").innerHTML = d;
 
         shopperInfo[key].value = "";     
          });
-
 }
 
 
@@ -131,7 +143,6 @@ function discountButton(){
         discount[key].value = "";   
 
          });
-
 }
 
 
@@ -157,8 +168,6 @@ function myCheckBox() {
       } else {
          text.style.display = "none";
       }
-
-
       const checkBoxInstaBox = document.getElementById("instabox");
       var text = document.getElementById("textinstabox");
   
@@ -176,6 +185,6 @@ function myCheckBox() {
           } else {
              text.style.display = "none";
           }
+        }
 
-  }
 

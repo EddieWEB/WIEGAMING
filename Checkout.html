@@ -14,203 +14,213 @@
 <body>
 
 	<div class="container">
+		<div class="container-kundvagn">
 		<br>
 		<form>
-
-			<!--Kundvagn-->
-			<div class="shoppingitems">
-
-
-				<h4>
-					<span>Din kundvagn</span>
-					<span class="produkt-1">0</span>
-				</h4>
-
-				<div class="listItems">
-
-					<ul>
-						<li class="list">
-							<div>
-								<h6>Produkt 1</h6>
-								<small>Beskriving</small>
-							</div>
-							<span class="muted">12kr</span>
-						</li>
-
-						<li class="list">
-							<div>
-								<h6>Produkt 2</h6>
-								<small>Beskriving</small>
-							</div>
-							<span class="muted">8kr</span>
-						</li>
-
-						<li class="list">
-							<div>
-								<h6>Produkt 3</h6>
-								<small>Beskriving</small>
-							</div>
-							<span class="muted">5kr</span>
-						</li>
-
-						<div>
-							<li class="list-2">
-								<div>
-									<h6 class="green">Rabattkod</h6>
-									<small>EXEMPELKOD</small>
-								</div>
-								<span class="span-green">-5kr</span>
-							</li>
-
-
-							<li class="total-list">
-
-								<span>Totalt pris (inkl moms)</span>
-								<strong>20kr</strong>
-							</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="group-input">
-				<input type="text" class="discount-input" id="discountInput"
-					placeholder="Skriv din Rabattkod här . . .">
-				<div class="input-group-append">
-					<button type="submit" class="btn2">Använd</button>
-
-				</div>
-			</div>
-		</form>
-		<br>
-
-		<hr>
-		<!-- Leverans -->
-		<h4>Leverans</h4>
-
-		<div class="div-margin">
-			<div class="checkbox custom-radio">
-				<input id="postnord" name="delivery" type="radio" class="custom-control-input"
-					value="Postnord, Leverans inom 1 - 2 arbetsdagar" onclick="myCheckBox()">
-				<label class="custom-control-label" for="postnord">Postnord</label>
-				<div id="textpostnord" class="text">
-					<small>
-						Pris 19 SEK om din order överstiger 499:- annars 49 SEK.
-						<br>
-						Leverans till valfritt postombud.
-						<br>
-						Bestäm själv när det passar dig att hämta din order
-					</small>
-				</div>
-			</div>
-
-			<div class="checkbox custom-radio">
-				<input id="homedelivery" name="delivery" type="radio" class="custom-control-input" 
-				value="Hemleverans, Leverans inom 1 - 5 arbetsdagar" onclick="myCheckBox()">
-				<label class="custom-control-label" for="homedelivery">Hemleverans</label>
-				<div id="texthomedelivery" class="text">
-					<small>
-						Snabbleverans 1-2 dagar. Klimatkompenserad.
-						<br>
-						Levereras måndag-fredag 17-22, även söndagar.
-						<br>
-						Följ din leverans direkt i mobilen för närmare tidspunkt för leverans.
-						<br>
-						19 kr om din order överstiger 499 kr, annars 89 kr.
-					</small>
-				</div>
-			</div>
-
-			<div class="checkbox custom-radio">
-				<input id="instabox" name="delivery" type="radio" class="custom-control-input" 
-				value="Instabox, Snabbleverans 1-2 dagar även helger" onclick="myCheckBox()">
-				<label class="custom-control-label" for="instabox">Utlämningställe</label>
-				<div id="textinstabox" class="text">
-					<small>
-						Snabbleverans 1-2 dagar även helger. Beräknad leveranstid via SMS när ordern är på väg.
-						<br>
-						Klimatkompenserad. Fri frakt om din order överstiger 499:- annars 49:-
-						<br>
-						Hämta när det passar dig, utan kö. En BankID verifiering kan komma att krävas vid upphämtning av
-						paketet.
-						<br>
-						Vid stora beställningar levereras din order till hemadressen.
-
-					</small>
-				</div>
-			</div>
-		</div>
-
-		<hr>
-
-		<!--kunduppgifter-->
-		<div class="bigContainer">
 			<h4>
-				<span>
-					Dina uppgifter
+				<span>Din kundvagn</span>
+				<span class="produkt-1">
+					<div id="product-qty">0</div>
 				</span>
 			</h4>
 
-			<form>
-				<div class="formPosition">
-					<div class="formgroup">
-						<input type="email" class="form-input" id="mailInput" placeholder="Mejladress">
+			<div class="listItems">
 
-
-						<div class="sidetoside">
-							<div class="formgroup-sidetoside">
-								<input type="text" class="form-input" id="namnInput" placeholder="Förnamn. . .">
-							</div>
-
-							<div class="formgroup-sidetoside">
-								<input type="text" class="form-input" id="lastnameInput" placeholder="Efternamn . . .">
-							</div>
+				<ul id="product-list">
+					<li class="list">
+						<div>
+							<h6>
+							<div id="product-name">Produkt 1</div>	
+							</h6>
+							<small>Beskriving</small>
 						</div>
-					</div>
+						<span class="muted">
+							<div id="product-price">12kr</div>
+						</span>
+					</li>
 
-					<div class="formgroup">
-						<input type="text" class="form-input" id="adressInput" placeholder="Adress. . .">
-					</div>
+					<li class="list">
+						<div>
+							<h6>
+								<div id="product-name">Produkt 2</div>	
+							</h6>
+							<small>Beskriving</small>
+						</div>
+						<span class="muted">
+							<div id="product-price">8kr</div>
+						</span>
+					</li>
+
+					<li class="list">
+						<div>
+							<h6>
+								<div id="product-name">Produkt 3</div>	
+							</h6>
+							<small>Beskriving</small>
+						</div>
+						<span class="muted">
+							<div id="product-price">5kr</div>
+						</span>
+					</li>
+
+					<div>
+						<li class="list-2">
+							<div>
+								<h6 class="green">Rabattkod</h6>
+								<small>EXEMPELKOD</small>
+							</div>
+							<span class="span-green">0kr</span>
+						</li>
+
+
+						<li class="total-list">
+							<span>Totalt pris (inkl moms)</span>
+							<strong>
+								<div id="cart-total">20kr</div>
+							</strong>	
+						</li>
+				</ul>
+			</div></div>
+	
+	<div class="group-input">
+		<input type="text" class="discount-input" id="discountInput" placeholder="Skriv din Rabattkod här . . .">
+		<div class="input-group-append">
+			<button type="submit" class="btn2">Använd</button>
+		</div>
+	</div>	
+		</form>
+	
+	<br>
+
+	<hr>
+	<!-- Leverans -->
+	<h4>Leverans</h4>
+
+	<div class="div-margin">
+		<div class="checkbox custom-radio">
+			<input id="postnord" name="delivery" type="radio" class="custom-control-input"
+				value="Postnord, Leverans inom 1 - 2 arbetsdagar" onclick="myCheckBox()">
+			<label class="custom-control-label" for="postnord">Postnord</label>
+			<div id="textpostnord" class="text">
+				<small>
+					Pris 19 SEK om din order överstiger 499:- annars 49 SEK.
+					<br>
+					Leverans till valfritt postombud.
+					<br>
+					Bestäm själv när det passar dig att hämta din order
+				</small>
+			</div>
+		</div>
+
+		<div class="checkbox custom-radio">
+			<input id="homedelivery" name="delivery" type="radio" class="custom-control-input"
+				value="Hemleverans, Leverans inom 1 - 5 arbetsdagar" onclick="myCheckBox()">
+			<label class="custom-control-label" for="homedelivery">Hemleverans</label>
+			<div id="texthomedelivery" class="text">
+				<small>
+					Snabbleverans 1-2 dagar. Klimatkompenserad.
+					<br>
+					Levereras måndag-fredag 17-22, även söndagar.
+					<br>
+					Följ din leverans direkt i mobilen för närmare tidspunkt för leverans.
+					<br>
+					19 kr om din order överstiger 499 kr, annars 89 kr.
+				</small>
+			</div>
+		</div>
+
+		<div class="checkbox custom-radio">
+			<input id="instabox" name="delivery" type="radio" class="custom-control-input"
+				value="Instabox, Snabbleverans 1-2 dagar även helger" onclick="myCheckBox()">
+			<label class="custom-control-label" for="instabox">Utlämningställe</label>
+			<div id="textinstabox" class="text">
+				<small>
+					Snabbleverans 1-2 dagar även helger. Beräknad leveranstid via SMS när ordern är på väg.
+					<br>
+					Klimatkompenserad. Fri frakt om din order överstiger 499:- annars 49:-
+					<br>
+					Hämta när det passar dig, utan kö. En BankID verifiering kan komma att krävas vid upphämtning av
+					paketet.
+					<br>
+					Vid stora beställningar levereras din order till hemadressen.
+
+				</small>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<!--kunduppgifter-->
+	<div class="bigContainer">
+		<h4>
+			<span>
+				Dina uppgifter
+			</span>
+		</h4>
+
+		<form action="/action_page.php">
+			<div class="formPosition">
+				<div class="formgroup">
+					<input type="email" class="form-input" id="mailInput" placeholder="Mejladress">
+
 
 					<div class="sidetoside">
 						<div class="formgroup-sidetoside">
-							<input type="text" class="form-input" id="postcodeInput" placeholder="Postnummer. . .">
+							<input type="text" class="form-input" id="namnInput" placeholder="Förnamn. . .">
 						</div>
 
 						<div class="formgroup-sidetoside">
-							<input type="text" class="form-input" id="postortInput" placeholder="Postort . . .">
+							<input type="text" class="form-input" id="lastnameInput" placeholder="Efternamn . . .">
 						</div>
 					</div>
+				</div>
 
-					<div class="formgroup">
-						<input type="tel" class="form-input" id="phoneInput" placeholder="+46. . .">
+				<div class="formgroup">
+					<input type="text" class="form-input" id="adressInput" placeholder="Adress. . .">
+				</div>
+
+				<div class="sidetoside">
+					<div class="formgroup-sidetoside">
+						<input type="number" class="form-input" id="postcodeInput" placeholder="Postnummer. . .">
 					</div>
 
-				</div>
-				<hr>
-				<div class="checkbox custom-checkbox">
-					<input type="checkbox" class="custom-control-input" id="same-address">
-					<label class="custom-control-label" for="same-address">Skicka till fakturaadressen</label>
-				</div>
-
-
-				<hr>
-
-				<!--Betalning-->
-				<h4>Betalningsmetod</h4>
-
-				<div class="div-margin">
-					<div class="checkbox custom-radio" onclick="myCheckBox()">
-						<input id="credit" value="Visakort" name="paymentMethod" type="radio" class="custom-control-input">
-						<label class="custom-control-label" for="credit">Visakort</label>
+					<div class="formgroup-sidetoside">
+						<input type="text" class="form-input" id="postortInput" placeholder="Postort . . .">
 					</div>
-
-
-
 				</div>
 
-				<hr>
+				<div class="formgroup">
+					<input type="tel" class="form-input" id="phoneInput" placeholder="+46. . .">
+				</div>
 
+			</div>
+			<hr>
+			<div class="checkbox custom-checkbox">
+				<input type="checkbox" class="custom-control-input" id="same-address">
+				<label class="custom-control-label" for="same-address">Skicka till fakturaadressen</label>
+			</div>
+
+
+			<hr>
+
+			<!--Betalning-->
+			<h4>Betalningsmetod</h4>
+
+			<div class="div-margin">
+				<div class="checkbox custom-radio" onclick="myCheckBox()">
+					<input id="credit" value="Visakort" name="paymentMethod" type="radio" class="custom-control-input">
+					<label class="custom-control-label" for="credit">Visakort</label>
+				</div>
+
+
+
+			</div>
+
+			<hr>
+			<form action="/action_page.php">
 				<div class="text" id="textvisacard">
+
 					<div class="divpayment">
 						<div class="col-md-6 div-bottom">
 							<label for="cc-name">Namn på kort</label>
@@ -220,22 +230,29 @@
 								Name on card is required
 							</div>
 						</div>
+
 						<div class="col-md-6 div-bottom">
 							<label for="cc-number">Kortnummer</label>
-							<input type="number" class="form-input" id="cc-number" placeholder="1234 5678 9012 3456">
+							<input type="number" class="form-input" id="cc-number" placeholder="1234 5678 9012 3456"
+								maxlength="16">
 							<div class="invalid-feedback">
 								Credit card number is required
 							</div>
 						</div>
+
 					</div>
+
 					<div class="divpayment">
+
 						<div class="col-md-3 div-bottom">
 							<label for="cc-expiration">Utgångsdatum</label>
 							<input type="text" class="form-input" id="cc-expiration" placeholder="MM/AA">
 							<div class="invalid-feedback">
 								Expiration date required
 							</div>
+
 						</div>
+
 						<div class="col-md-3 div-bottom">
 							<label for="cc-cvv">CVC/CVV</label>
 							<input type="number" class="form-input" id="cc-cvv" placeholder="3 siffror">
@@ -243,52 +260,55 @@
 								Security code required
 							</div>
 						</div>
-					</div>
-				</div>
-				<hr>
-				<button class="btn btn-primary btn-lg btn-block" id="btnPay" type="submit">Slutför köp</button>
 			</form>
-			<!--Modal-->
-			<div id="myModal" class="modal">
+	</div>
+	</div>
+	</div>
+	<hr>
+	<button class="btn btn-primary btn-lg btn-block" id="btnPay" type="submit">Slutför köp</button>
+	</form>
+	<!--Modal-->
+	<div id="myModal" class="modal">
 
-				<!-- Modal innehåll -->
-				<div class="modal-content" id="modal">
-					<span class="close">&times;</span>
-					
-					<div class="modalstyle">
+		<!-- Modal innehåll -->
+		<div class="modal-content" id="modal">
+			<span class="close">&times;</span>
 
-					
-							<h2 class="h2order">Din beställning är genomförd!!</h2>
-							<img src="http://clipart-library.com/img/1179457.gif" class="fireworks">
-	
-	<div class="infotext">
-						<p class="leverans">KundInfo:</p>
+			<div class="modalstyle">
+
+
+
+				<h2 class="h2order">Din beställning är genomförd!!</h2>
+
+				<img src="http://clipart-library.com/img/1179457.gif" class="fireworks">
+
+				<div class="infotext">
+
+					<p class="leverans">KundInfo:</p>
+
 					<small>
-							<div id="kundinfo" class="kundinfoo"></div>
-						</small>
-					
+						<div id="kundinfo" class="kundinfoo"></div>
+					</small>
 
 					<p class="leverans">Leveransalternativ:</p>
 					<small>
-					<div id="leveransinfo" class="kundinfoo"></div>
-				</small>
-					
+						<div id="leveransinfo" class="kundinfoo"></div>
+					</small>
+
 					<p class="leverans">Betalningsalternativ</p>
 					<small>
-					<div id="betalinfo" class="kundinfoo"></div>
-				</small>
-			</div>
-		
-		
-		</div>
-				
-		
-			
+						<div id="betalinfo" class="kundinfoo"></div>
+					</small>
+
 				</div>
+
+
 			</div>
 		</div>
 	</div>
-
+	</div>
+	</div>
+</div>
 	<br>
 	<br>
 
