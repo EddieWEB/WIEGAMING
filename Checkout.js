@@ -80,7 +80,7 @@ document.querySelector("#betalinfo").innerHTML = d;
 
 
 // om input inte fylls i funkar inte knappen (Betalning)
- /*   if(!payWithCart.cardName.value) return;
+  if(!payWithCart.cardName.value) return;
     if(!payWithCart.cardNumber.value) return;
     if(!payWithCart.cardexpire.value) return;
     if(!payWithCart.cardCvv.value) return;
@@ -92,7 +92,7 @@ document.querySelector("#betalinfo").innerHTML = d;
     if(!shopperInfo.lastName.value) return;
     if(!shopperInfo.adress.value) return;
     if(!shopperInfo.postCode.value) return;
-    if(!shopperInfo.postOrt.value) return;*/
+    if(!shopperInfo.postOrt.value) return;
 
     // hämta modal
     const modal = document.getElementById("myModal");
