@@ -10,7 +10,7 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.294); /* Black w/ opacity */
-}
+
 
  /* Modal Content */
  .modal-content {
@@ -43,56 +43,61 @@
   height: 31.25rem;
       
       } 
- }
+    }
 
- .close {
-  color: #6E7371;
-  float: right;
-  font-size: 2rem;
-  font-weight: bold;
-  margin: -5.625rem;
-  margin-top: -6.25rem;
+    .infotext {
+      margin-top: -20%;
+    
+      @include responsive(tab-port) {
+        margin-top: -17%;
+            
+            } 
+    
+     @include responsive(phone) {
+              margin-top: -50%;
+              margin-left: -15%;
+                  
+                  } 
+    
+      
+    }
+    
+    .modalstyle {
+      margin-top: 6.688rem;
+      margin-left: -3.938rem;
+    }
+    
+    
+    .kundinfoo {
+        margin-left: 0rem;
+        margin-top: -1.125rem;
+       }
+    
+    
+    .leverans {
+      margin-top: 0rem;
+      margin-bottom: 1rem;
+    }
+
+    .close {
+      color: #6E7371;
+      float: right;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: -5.625rem;
+      margin-top: -6.25rem;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: $c3-light-grey;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
 }
 
-.close:hover,
-.close:focus {
-  color: #6E7371;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.infotext {
-  margin-top: -20%;
-
-  @include responsive(tab-port) {
-    margin-top: -17%;
-        
-        } 
-
- @include responsive(phone) {
-          margin-top: -50%;
-          margin-left: -15%;
-              
-              } 
-
-  
-}
-
-.modalstyle {
-  margin-top: 6.688rem;
-  margin-left: -3.938rem;
-}
 
 
-.kundinfoo {
-    margin-left: 0rem;
-    margin-top: -1.125rem;
-   }
-
-
-.leverans {
-  margin-top: 0rem;
-  margin-bottom: 1rem;
-}
 
 

@@ -39,6 +39,12 @@ container-kundvagn {
 
 
 .group-input{
+
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+
 .discount-input{
     display: block;
     width: 100%;
@@ -82,8 +88,7 @@ display: inline-block;
   
   @include responsive(tab-port) {
 
-    margin-top: -8%;
-}
+    margin-top: -7%;
 
         } 
   
@@ -96,7 +101,7 @@ display: inline-block;
 
 }
 
-
+.container {
 
 .produkt-1{
 
@@ -105,7 +110,6 @@ display: inline-block;
     border-radius: 10rem;
     display: inline-block;
     padding: 0.25em 0.4em;
-    font-size: 4.688rem;
     font-weight: 700;
     line-height: 1;
     text-align: center;
@@ -140,6 +144,14 @@ display: inline-block;
 }
 
 
+
+
+
+
+
+
+
+
 .total-list {
     justify-content: space-between!important;
     display: flex!important;
@@ -151,10 +163,4 @@ display: inline-block;
 }
 
 
-.group-input {
-
-    position: relative;
-    display: flex;
-    align-items: stretch;
-    width: 100%;
 }
