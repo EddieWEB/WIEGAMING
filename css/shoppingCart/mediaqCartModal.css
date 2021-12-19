@@ -1,0 +1,39 @@
+@media screen and (min-width: 768px) {
+  .varukorg-modal-content {
+    animation-name: none;
+    width: 55%;
+    float: right;
+    height: 100%;
+    margin: 0;
+    animation-name: slidein;
+    animation-duration: 0.2s;
+    transition-timing-function: ease-out; }
+  @keyframes slidein {
+    0% {
+      width: 0;
+      opacity: 0; }
+    100% {
+      width: 55%;
+      opacity: 1; } } }
+
+@media screen and (min-width: 970px) {
+  .varukorg-modal-content {
+    width: 45%; }
+  @keyframes slidein {
+    0% {
+      width: 0;
+      opacity: 0; }
+    100% {
+      width: 45%;
+      opacity: 1; } } }
+
+@media screen and (min-width: 1200px) {
+  .varukorg-modal-content {
+    width: 35%; }
+  @keyframes slidein {
+    0% {
+      width: 0;
+      opacity: 0; }
+    100% {
+      width: 35%;
+      opacity: 1; } } }

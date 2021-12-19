@@ -1,0 +1,78 @@
+@media screen and (min-width: 768px) {
+  .navMenuFontSize > li > a {
+    font-size: 1.5rem; }
+  .navIconFontSize > a {
+    font-size: 2.5rem; }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    height: 22vh;
+    justify-content: space-between;
+    align-items: center; }
+    .nav .navTop {
+      width: 100%;
+      height: 14vh; }
+      .nav .navTop .h1Nav .logoContainer {
+        width: 7rem;
+        height: 7rem; }
+        .nav .navTop .h1Nav .logoContainer .logo {
+          width: 6rem;
+          height: 6rem; }
+    .nav .navBot {
+      width: 100%;
+      height: 8vh; }
+      .nav .navBot .fa-bars {
+        display: none !important; }
+      .nav .navBot .hamburger-modal-content {
+        animation-name: none;
+        width: 55%;
+        float: right;
+        height: 100%;
+        margin: 0;
+        animation-name: slidein;
+        animation-duration: 0.2s;
+        transition-timing-function: ease-out; }
+      .nav .navBot .navMenu {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        list-style: none;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 8vh;
+        margin: 0 !important;
+        padding: 0 !important; }
+        .nav .navBot .navMenu .liNav {
+          text-align: center; }
+          .nav .navBot .navMenu .liNav .aNav {
+            text-decoration: none;
+            color: whitesmoke; }
+  @keyframes slidein {
+    0% {
+      width: 0;
+      opacity: 0; }
+    100% {
+      width: 55%;
+      opacity: 1; } } }
+
+@media screen and (min-width: 970px) {
+  .hamburger-modal-content {
+    width: 45%; }
+  @keyframes slidein {
+    0% {
+      width: 0;
+      opacity: 0; }
+    100% {
+      width: 45%;
+      opacity: 1; } } }
+
+@media screen and (min-width: 1200px) {
+  .hamburger-modal-content {
+    width: 35%; }
+  @keyframes slidein {
+    0% {
+      width: 0;
+      opacity: 0; }
+    100% {
+      width: 35%;
+      opacity: 1; } } }

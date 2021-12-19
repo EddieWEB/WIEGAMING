@@ -1,0 +1,70 @@
+.fa-bars {
+  background-color: #3A3A3A;
+  font-size: 3rem;
+  color: whitesmoke; }
+
+.hamburger-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(151, 143, 143, 0.5); }
+  .hamburger-modal .hamburger-modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    margin: 5% auto;
+    width: 95%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 1s; }
+    .hamburger-modal .hamburger-modal-content .hamburger-modal-header {
+      padding: 2rem;
+      background-color: #0071BC; }
+      .hamburger-modal .hamburger-modal-content .hamburger-modal-header .close-btn {
+        float: right;
+        margin-right: 2rem;
+        margin-top: -1rem;
+        font-size: 3rem;
+        color: whitesmoke; }
+      .hamburger-modal .hamburger-modal-content .hamburger-modal-header .close-btn:hover, .hamburger-modal .hamburger-modal-content .hamburger-modal-header .close-btn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer; }
+    .hamburger-modal .hamburger-modal-content .hamburger-modal-header > h2 {
+      color: whitesmoke; }
+    .hamburger-modal .hamburger-modal-content .hamburger-modal-categories {
+      display: flex;
+      justify-content: center;
+      height: 86%; }
+      .hamburger-modal .hamburger-modal-content .hamburger-modal-categories .modalMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        background: #575757;
+        color: whitesmoke;
+        list-style: none;
+        width: 100%;
+        height: 100%; }
+        .hamburger-modal .hamburger-modal-content .hamburger-modal-categories .modalMenu .liModal {
+          display: flex;
+          justify-content: center;
+          margin: auto;
+          width: 100%; }
+          .hamburger-modal .hamburger-modal-content .hamburger-modal-categories .modalMenu .liModal .aModal {
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            width: 100%;
+            font-size: 1.7rem; }
+
+@keyframes modalopen {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }

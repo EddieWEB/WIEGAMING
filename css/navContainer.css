@@ -1,0 +1,45 @@
+.nav {
+  background-color: #3A3A3A;
+  display: flex;
+  flex-direction: row;
+  height: 15vh; }
+  .nav .navTop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    margin: auto; }
+    .nav .navTop .h1Nav {
+      margin: 0; }
+      .nav .navTop .h1Nav .logoContainer {
+        width: 6rem;
+        height: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .nav .navTop .h1Nav .logoContainer .logo {
+          width: 5rem;
+          height: 5rem; }
+    .nav .navTop .icons {
+      display: flex;
+      font-size: 1.4rem;
+      width: 20vw;
+      justify-content: space-around; }
+      .nav .navTop .icons .iconNav:visited {
+        color: whitesmoke; }
+      .nav .navTop .icons .fa-heart {
+        color: #DF5653; }
+      .nav .navTop .icons .fa-shopping-cart {
+        color: #0071BC; }
+  .nav .navBot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw; }
+    .nav .navBot .navMenu {
+      display: none;
+      background: #575757;
+      color: whitesmoke;
+      list-style: none;
+      width: 100%;
+      justify-content: space-around; }

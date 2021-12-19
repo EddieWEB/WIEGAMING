@@ -1,0 +1,47 @@
+body {
+  font-family: "Oswald", sans-serif; }
+
+.admin-container {
+  margin: auto;
+  max-width: 1200px;
+  padding: 1rem; }
+
+#input-form {
+  margin: auto; }
+
+.admin-controls {
+  padding: 20px 0;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  height: 78px; }
+  .admin-controls form {
+    max-width: 440px; }
+  .admin-controls #input-img {
+    max-width: 300px; }
+
+.col-container {
+  display: flex;
+  justify-content: space-between; }
+  .col-container .left-col, .col-container .right-col {
+    max-width: 440px;
+    width: 100%; }
+  .col-container .right-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #575757;
+    color: whitesmoke;
+    height: 440px; }
+
+@media only screen and (max-width: 920px) {
+  .col-container {
+    flex-wrap: wrap;
+    justify-content: center; } }
+
+table {
+  margin-top: 2rem;
+  table-layout: fixed; }
+
+td {
+  vertical-align: middle; }
