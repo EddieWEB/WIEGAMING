@@ -8,6 +8,7 @@ const ph = new ProductHandler();
 const url = new URL(location.href);
 const product = ph.getByID(url.searchParams.get('id'));
 
+
 //om produkten ej finns
 if (!product) {
     document.querySelector(".product-landing-page").innerHTML=`
@@ -55,24 +56,20 @@ else {
     Lagerstatus: Produkten är tyvärr slut.
     `
 }
-})();
-
-
-const ph = new ProductHandler();
-const url = new URL(location.href);
-const product = ph.getByID(url.searchParams.get('id'));
 
 //Button Selectors
 const cartBtn = document.querySelector(".add-cart");
+console.log(ph)
 const wishListBtn = document.querySelector(".add-Wishlist");
 
 //Local storage selectors
-const wishlist = JSON.parse(localStorage.getItem("wishlsit")) || [];
+//const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
+const products = JSON.parse(localStorage.getItem('products')) || []
 
 //eventlisteners
-cartBtn.addEventListener("click", addToCart);
-wishListBtn.addEventListener("click", addToWishlist);
+cartBtn.addEventListener("click", addToCart(product.id));
+wishListBtn.addEventListener("click", ()=>{addToWishlist(product.id)});
 
 //function for add cart btn
 function setCartLocalStorage () {
@@ -80,26 +77,24 @@ function setCartLocalStorage () {
 }
 
 //function for add wishlist btn
-function setWishlistLocalStorage () {
+function setWishlistLocalStorage (wishlist) {
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
 }
 
 //function for add product to wishlist
 function addToWishlist(id) {
-    for(let i=0; i < products.length; i+=1) {
-        if(products[i].id === id) {
-            for(let i=0; i < wishlist.length; i+=1) {
-                if(wishlist[i].id === id) {
-                    wishlist[i].qty +=1
-                    setWishlistLocalStorage()
-                    return
-                }
-                products[i].qty = 1
-                wishlist.push(products[i])
-                setWishlistLocalStorage()
-            }
-        }
-    }
+    let wishlistObject = {id:id, qty:1};
+    let product = ph.getByID(id);
+    if (!product) return null;
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    let wishlistIndex = wishlist.findIndex(i => i.id === id);
+    
+    if (wishlistIndex > -1) 
+        wishlist[wishlistIndex].qty += 1
+    else
+        wishlist.push(wishlistObject)
+
+    setWishlistLocalStorage(wishlist)
 }
 
 //function for add product to cart
@@ -120,3 +115,15 @@ function addToCart(id) {
         return
     }
 }
+function getWishlistProducts () {
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    console.log(wishlist)
+    return wishlist.map(i => {
+        i.product = ph.getByID(i.id)
+        return i
+    })
+}
+let test = getWishlistProducts()
+console.log(test)
+
+})();
