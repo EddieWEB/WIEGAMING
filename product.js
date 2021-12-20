@@ -58,6 +58,10 @@ else {
 })();
 
 
+const ph = new ProductHandler();
+const url = new URL(location.href);
+const product = ph.getByID(url.searchParams.get('id'));
+
 //Button Selectors
 const cartBtn = document.querySelector(".add-cart");
 const wishListBtn = document.querySelector(".add-Wishlist");
@@ -67,15 +71,52 @@ const wishlist = JSON.parse(localStorage.getItem("wishlsit")) || [];
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 //eventlisteners
-cartBtn.addEventListener("click", addCart);
-wishListBtn.addEventListener("click", addWishList);
+cartBtn.addEventListener("click", addToCart);
+wishListBtn.addEventListener("click", addToWishlist);
 
 //function for add cart btn
-function addCart () {
+function setCartLocalStorage () {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 //function for add wishlist btn
-function addWishList () {
+function setWishlistLocalStorage () {
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
+}
+
+//function for add product to wishlist
+function addToWishlist(id) {
+    for(let i=0; i < products.length; i+=1) {
+        if(products[i].id === id) {
+            for(let i=0; i < wishlist.length; i+=1) {
+                if(wishlist[i].id === id) {
+                    wishlist[i].qty +=1
+                    setWishlistLocalStorage()
+                    return
+                }
+                products[i].qty = 1
+                wishlist.push(products[i])
+                setWishlistLocalStorage()
+            }
+        }
+    }
+}
+
+//function for add product to cart
+function addToCart(id) {
+    for(let i=0; i < products.length; i+=1) {
+        if(products[i].id === id) {
+            for(let i=0; i < cart.length; i+=1) {
+                if(cart[i].id === id) {
+                    cart[i].qty +=1
+                    setCartLocalStorage()
+                    return
+                }
+                products[i].qty = 1
+                cart.push(products[i])
+                setCartLocalStorage()
+            }
+        }
+        return
+    }
 }
