@@ -13,10 +13,11 @@
 
 
  /* Modal Content */
- .modal-content {
+ .modal-content-checkout {
+   overflow: auto;
   background-color: whitesmoke;
   margin: auto;
-  font-family: Oswald;
+  font-family: $fontFamily;
   padding: 6.25rem;
   border: 0.063rem solid #888;
   border-radius: 2%;
@@ -63,7 +64,7 @@
     }
     
     .modalstyle {
-      margin-top: 6.688rem;
+      margin-top: -3.688rem;
       margin-left: -3.938rem;
     }
     
