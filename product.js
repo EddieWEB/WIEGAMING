@@ -59,20 +59,17 @@ else {
 
 //Button Selectors
 const cartBtn = document.querySelector(".add-cart");
-console.log(ph)
 const wishListBtn = document.querySelector(".add-Wishlist");
 
 //Local storage selectors
 //const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
-const products = JSON.parse(localStorage.getItem('products')) || []
+//const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 //eventlisteners
-cartBtn.addEventListener("click", addToCart(product.id));
-wishListBtn.addEventListener("click", ()=>{addToWishlist(product.id)});
-
+cartBtn.addEventListener("click", ()=>{addToCartModal(product.id)});
+wishListBtn.addEventListener("click", ()=>{addToWishlistModal(product.id)});
 //function for add cart btn
-function setCartLocalStorage () {
+function setCartLocalStorage (cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
@@ -82,7 +79,7 @@ function setWishlistLocalStorage (wishlist) {
 }
 
 //function for add product to wishlist
-function addToWishlist(id) {
+function addToWishlistModal(id) {
     let wishlistObject = {id:id, qty:1};
     let product = ph.getByID(id);
     if (!product) return null;
@@ -98,32 +95,29 @@ function addToWishlist(id) {
 }
 
 //function for add product to cart
-function addToCart(id) {
-    for(let i=0; i < products.length; i+=1) {
-        if(products[i].id === id) {
-            for(let i=0; i < cart.length; i+=1) {
-                if(cart[i].id === id) {
-                    cart[i].qty +=1
-                    setCartLocalStorage()
-                    return
-                }
-                products[i].qty = 1
-                cart.push(products[i])
-                setCartLocalStorage()
-            }
-        }
-        return
-    }
-}
-function getWishlistProducts () {
-    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-    console.log(wishlist)
-    return wishlist.map(i => {
-        i.product = ph.getByID(i.id)
-        return i
-    })
-}
-let test = getWishlistProducts()
-console.log(test)
 
+function addToCartModal(id) {
+    let cartObject = {id:id, qty:1};
+    let product = ph.getByID(id);
+    if (!product) return null;
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cartIndex = cart.findIndex(i => i.id === id);
+    
+    if (cartIndex > -1)
+        cart[cartIndex].qty += 1
+    else
+        cart.push(cartObject)
+
+    setCartLocalStorage(cart)
+}
+
+function getWishlistProducts () {
+     let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    return wishlist.map(i => {
+         i.product = ph.getByID(i.id)
+         return i
+     })
+ }
+    let test = getWishlistProducts()
+    console.log(test)
 })();
