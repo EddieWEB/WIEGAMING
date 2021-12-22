@@ -1,10 +1,10 @@
-@import "variable.scss";
+@import "../variable.scss";
 
 * {
     padding: $padding;
     margin: $margin;
     box-sizing: $boxSizing;
-    font-family: $fontSize;
+    font-family: $fontFamily;
     color: $color;
 }
 
@@ -111,5 +111,5 @@
 }
 
 //längst ned
-@import "mediaqueries.scss";
+@import "./mediaqCartModal.scss";
 

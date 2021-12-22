@@ -1,0 +1,72 @@
+@import "../variable.scss";
+
+body{
+    margin: auto;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+#input-form {
+    margin: auto;
+}
+
+//Flexbox på knapparna/inputs högst upp på sidan
+.admin-controls {
+    padding: 20px 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 78px; 
+
+    form{
+        max-width: 440px;
+    }
+
+    #input-img{
+        max-width: 300px;
+    }
+}
+
+//Container för resten av formen, här också flex
+.col-container {
+    display: flex;
+    justify-content: space-between;
+    
+
+    .left-col, .right-col{
+        max-width: 440px;
+        width: 100%;
+    }
+
+    .right-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $c3-light-grey;
+        color: whitesmoke;
+        height: 440px;
+
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .col-container {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  table{
+      margin-top: 2rem;
+      table-layout: fixed;
+  }
+
+  td{
+    vertical-align: middle;
+  }
+  
+
+
+
+
+

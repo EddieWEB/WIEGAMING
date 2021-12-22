@@ -1,0 +1,61 @@
+@import "../variable.scss";
+
+@media screen and (min-width: $breakpoint-ipad) {
+    .varukorg-modal-content {
+        animation-name: none; // vill bli av med animation från mobil.
+        width: 55%;
+        float: right;
+        height: 100%;
+        margin:0;
+        animation-name: slidein;
+        animation-duration: 0.2s;
+        transition-timing-function: ease-out;
+    }
+
+    //vill att den ska slidea in för höger ist för att gå från 0-1 opacity
+    @keyframes slidein {
+        0% {
+            width: 0;
+            opacity: 0;
+        }
+        100% {
+            width: 55%;
+            opacity: 1;
+        } 
+    }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+    .varukorg-modal-content {
+        width:45%;
+    }
+
+    @keyframes slidein {
+        0% {
+            width: 0;
+            opacity: 0;
+        }
+        100% {
+            width: 45%;
+            opacity: 1;
+        } 
+    }
+}
+
+@media screen and (min-width: $breakpoint-max) {
+    .varukorg-modal-content {
+        width:35%;
+    }
+
+    @keyframes slidein {
+        0% {
+            width: 0;
+            opacity: 0;
+        }
+        100% {
+            width: 35%;
+            opacity: 1;
+        } 
+    }
+}
+

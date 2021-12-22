@@ -1,7 +1,7 @@
-@import "variable.scss";
+@import "../variable.scss";
 
 @media screen and (min-width: $breakpoint-ipad) {
-    .varukorg-modal-content {
+    .wishlist-modal-content {
         animation-name: none; // vill bli av med animation från mobil.
         width: 55%;
         float: right;
@@ -26,7 +26,7 @@
 }
 
 @media screen and (min-width: $breakpoint-desktop) {
-    .varukorg-modal-content {
+    .wishlist-modal-content {
         width:45%;
     }
 
@@ -43,7 +43,7 @@
 }
 
 @media screen and (min-width: $breakpoint-max) {
-    .varukorg-modal-content {
+    .wishlist-modal-content {
         width:35%;
     }
 
@@ -58,4 +58,3 @@
         } 
     }
 }
-

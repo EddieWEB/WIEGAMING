@@ -9,7 +9,7 @@ var product = new ProductTemplate();
 const ph = new ProductHandler();
 //Anger kategorier
 const productCategories = [
-    'Datorer',
+    'Skärmar',
     'Tangentbord',
     'Möss',
     'Konsoler',
@@ -32,6 +32,21 @@ Object.keys(form).forEach(key => {
     form[key].value = product[key];
 });
 
+//För att enkelt kunna spara ner dummy data till localstorage
+/* var title = ["Microsoft", "Nintendo", "XBOX", "Sony"];
+form.title.value = title[Math.floor(Math.random() * title.length)];
+form.price.value = Math.floor(Math.random() * (350 - 50) + 50) * 10;
+form.stock.value = Math.floor(Math.random() * (20 - 0)); */
+
+//Hämtar LoremIpsum text för dummy description
+/* try {
+    fetch('https://loripsum.net/api/3/short', { mode: 'cors' })
+        .then(req => req.text())
+        .then(resp => form.description.value = 'PRODUKTBESKRIVNING\n\n' + resp)
+        .catch(e => console.log(e));
+}catch(err){console.log('Cors plugin ej aktiverad')}; */
+
+
 //Populerar select dropdown med options i html
 productCategories.forEach(category => {
     let option = document.createElement("option");
@@ -39,6 +54,9 @@ productCategories.forEach(category => {
     option.innerText = category;
     form.category.appendChild(option);
 });
+
+//För att enkelt kunna spara ner dummy data till localstorage
+//form.category.value = "Konsoler";
 
 //Lägger till ett clickevent på "lägg till produkt" knappen
 document.querySelector("#add-product-btn").addEventListener('click', (e) => {
@@ -106,6 +124,84 @@ document.querySelector('#retrieve-img-btn').addEventListener('click', (e) => {
     });
 
 })
+
+
+function renderEditList() {
+    let tBody = document.querySelector('table > tbody');
+
+    ph.products.forEach(p => {
+        let template = document.createElement('template');
+        template.innerHTML = `
+            <tr>
+                <td><img src="${p.thumbnail}" referrerpolicy="no-referrer" width="50"></td>
+                <td>${p.title}</td>
+                <td>${p.price}</td>
+                <td>${p.category}</td>
+                <td>${p.shortDescription}</td>
+                <td>
+                    <button class="btn btn-primary">Editera</button>
+                    <button class="btn btn-danger">Ta bort</button>
+                </td>
+            </tr>
+        `;
+
+        let tr = template.content.cloneNode(true);
+
+        tr.querySelector(".btn-primary").addEventListener('click', e => {
+
+            document.querySelector('#add-product-btn').style.display = "none";
+
+            document.querySelector('#update-product-btn').style.display = "inline-block";
+            document.querySelector('#delete-product-btn').style.display = "inline-block";
+
+            product = p;
+
+            Object.keys(form).forEach(key => {
+                form[key].value = p[key];
+            });
+
+            let imgElem = document.createElement("img");
+            imgElem.setAttribute('src', product.thumbnail);
+            imgElem.setAttribute("referrerpolicy", "no-referrer");
+            imgElem.setAttribute("width", "440");
+            imgElem.setAttribute("height", "440");
+
+            let imgContainer = document.querySelector(".right-col");
+            imgContainer.innerHTML = "";
+            imgContainer.appendChild(imgElem);
+        });
+
+        tr.querySelector(".btn-danger").addEventListener('click', () => {
+            ph.deleteProduct(p.id);
+        })
+
+        tBody.appendChild(tr);
+
+    });
+}
+
+//EVentlistener, klick uppdaterar produkt
+document.querySelector("#update-product-btn").addEventListener('click', (e) => {
+    e.preventDefault();
+
+    Object.keys(form).forEach(key => {
+        product[key] = form[key].value;
+    });
+
+    ph.updateProduct(product);
+});
+
+//Eventlistener, klick tar bort produkten från listan(samt localstorage)
+document.querySelector("#delete-product-btn").addEventListener('click', (e) => {
+    e.preventDefault();
+
+    ph.deleteProduct(product.id);
+})
+
+renderEditList();
+
+
+
 
 
 

@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
         defer></script>
-    <link rel="stylesheet" href="./css/admin-style.css">
+    <link rel="stylesheet" href="./css/admin/admin-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
@@ -69,8 +69,27 @@
             <textarea id="description" class="form-control" rows="3" placeholder="Beskriv produkten..."></textarea>
         </div>
         <button class="btn btn-primary" id="add-product-btn">Lägg till</button>
+        <button class="btn btn-primary" id="update-product-btn" style="display: none">Uppdatera</button>
+        <button class="btn btn-danger" id="delete-product-btn" style="display: none">Ta bort</button>
     </form>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th width="100">Bild</th>
+                    <th>Titel</th>
+                    <th>Pris</th>
+                    <th>Kategori</th>
+                    <th>Kort Beskrivning</th>
+                    <th>Åtgärder</th>
+                </tr>
+            </thead>
 
+            <tbody>
+
+
+            </tbody>
+
+        </table>
 </body>
 
 </html>
